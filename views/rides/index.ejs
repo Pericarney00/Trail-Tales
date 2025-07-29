@@ -9,7 +9,7 @@
         <h5><%= ride.date.toDateString() %></h5> 
         <p><%= ride.location %></p> 
         <p><%= ride.notes %></p>
-        <a href="#"> <p>View full ride details</p> </a>
+        <a href="/rides/<%= ride._id%>"> <p>View full ride details</p> </a>
       </article> 
     <% }) %>
   

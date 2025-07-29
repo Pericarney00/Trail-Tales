@@ -1,0 +1,30 @@
+<%- include('../partials/_html-head.ejs', {title: 'All Rides'}) %>
+<%- include('../partials/_nav-bar.ejs') %>
+  
+<main>
+  <h1> <%= user.username %>'s Ride </h1>
+  
+    
+      <article>
+        <h3>Time Of Day: <%= ride.timeOfDay %></h3>
+        <h4><%= ride.date.toDateString() %></h4> 
+        <h5><%= ride.location %></h5> 
+        <p>Route Type: <%= ride.routeType%> </p>
+        <p>Minutes rode: <%= ride.minutes %> Distance rode: <%= ride.mile %> (mi)</p>
+        <p>Completed Full Trail: <%= ride.completedFullTrail %> </p>
+        <p>Notes for ride: <%= ride.notes %></p>
+      </article> 
+  
+
+
+
+
+    <p>
+      <a role=button href="/rides/new">Add a New Ride</a>
+    </p>
+
+
+
+</main>
+</body>
+</html>
