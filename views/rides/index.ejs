@@ -3,10 +3,22 @@
   
 <main>
   <h1> <%= user.username %>'s Rides </h1>
+  
+    <% rides.forEach(ride => { %>
+      <article>
+        <h5><%= ride.date.toDateString() %></h5> 
+        <p><%= ride.location %></p> 
+        <p><%= ride.notes %></p>
+        <a href="#"> <p>View full ride details</p> </a>
+      </article> 
+    <% }) %>
+  
+
+
+
 
     <p>
-      <a href="/rides/new">Add a New Ride</a>
-
+      <a role=button href="/rides/new">Add a New Ride</a>
     </p>
 
 

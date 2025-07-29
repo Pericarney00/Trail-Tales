@@ -29,6 +29,13 @@ router.get("/new", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     req.body.owner = req.session.user._id;
+    
+    if (req.body.completedFullTrail === "on") {
+      req.body.completedFullTrail = true;
+    } else {
+      req.body.completedFullTrail = false;
+    }
+
     await Ride.create(req.body);
     res.redirect("/")
   } catch (error) {
