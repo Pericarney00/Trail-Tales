@@ -1,0 +1,22 @@
+<%- include('../partials/_html-head.ejs', {title: 'Sign-in'}) %>
+<%- include('../partials/_nav-bar.ejs') %>
+<main>
+
+  <article>
+    <form action="/auth/sign-in" method="POST">
+      <h1 class="title">Sign in</h1>
+      <label class="label" for="username">Username:</label>
+      <input class="username" type="text" name="username" id="username" />
+      <label class="label" for="password">Password:</label>
+      <input class="password" type="password" name="password" id="password" />
+      <div class="control">
+        <button class="button submit is-link" type="submit">Sign in</button>
+      </div>
+    </form>
+  </article>
+
+</main>
+
+</body>
+
+</html>
