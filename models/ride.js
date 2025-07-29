@@ -14,11 +14,18 @@ const rideSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  distanceMinutes: {
-    type: Number,
+  routeType: {
+    type: String,
+    enum: ["Loop", "Out and Back", "Point to Point"],
+    required: true,
   },
-  distanceMiles: {
+  minutes: {
     type: Number,
+    min: 0,
+  },
+  miles: {
+    type: Number,
+    min: 0,
   },
   completedFullTrail: {
     type: Boolean,

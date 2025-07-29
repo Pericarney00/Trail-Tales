@@ -17,4 +17,23 @@ router.get("/", async (req, res) => {
 })
 
 
+router.get("/new", async (req, res) => {
+  try {
+    res.render("rides/new.ejs")
+  } catch (error) {
+    console.log("/")
+    res.redirect("/")
+  }
+})
+
+router.post("/", async (req, res) => {
+  try {
+    req.body.owner = req.session.user._id;
+    await Ride.create(req.body);
+    res.redirect("/")
+  } catch (error) {
+    console.log(error)
+    res.redirect("/")
+  }
+})
 module.exports = router;
