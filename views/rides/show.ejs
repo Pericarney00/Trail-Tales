@@ -14,15 +14,18 @@
         <p>Completed Full Trail: <%= ride.completedFullTrail %> </p>
         <p>Notes for ride: <%= ride.notes %></p>
       </article> 
-  
-
-    <p>
+    
+      <p>
       <a role=button href="/rides/new">Add a New Ride</a>
     </p>
-
     <p>
       <a role=button href="/rides/<%= ride._id %>/edit">Edit This Ride</a>
     </p>
+
+    <form action="/rides/<%= ride._id %>?_method=DELETE" method="POST">
+    <button type="submit">DELETE THIS RIDE</button>
+    </form>
+
 
 </main>
 </body>

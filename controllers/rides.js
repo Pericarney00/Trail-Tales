@@ -89,6 +89,22 @@ router.put("/:rideId", async (req, res) => {
   }
 })
 
+router.delete("/:rideId", async (req, res) => {
+  try {
+    const ride = await Ride.findById(req.params.rideId);
+    
+    if (ride.owner.equals(req.session.user._id)) {
+      await ride.deleteOne()
+      res.redirect("/rides")
+    } else {
+      res.send("You dont have permission to do that")
+    }
+
+  } catch (error) {
+    console.log(error)
+    res.redirect("/")
+  }
+})
 
 
 
