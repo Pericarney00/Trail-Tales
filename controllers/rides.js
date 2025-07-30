@@ -60,8 +60,34 @@ router.get("/:rideId", async (req, res) => {
 
 
 
+router.get("/:rideId/edit", async (req, res) => {
+  try { 
+    const currentRide = await Ride.findById(req.params.rideId);
+    console.log(" THIS IS THE CONSOLE LOG", req.params.rideId)
+    res.render("rides/edit.ejs", {
+      ride: currentRide,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
 
-
+router.put("/:rideId", async (req, res) => {
+  try {
+    if (req.body.completedFullTrail === "on") {
+      req.body.completedFullTrail = true;
+    } else {
+      req.body.completedFullTrail = false;
+    }
+    
+    const currentRide = await Ride.findByIdAndUpdate(req.params.rideId, req.body);
+    res.redirect("/rides")
+  } catch (error) {
+    console.log(error);
+    res.redirect("/")
+  }
+})
 
 
 

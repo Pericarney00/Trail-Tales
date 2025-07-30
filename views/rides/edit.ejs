@@ -1,0 +1,46 @@
+<%- include('../partials/_html-head.ejs', {title: 'New Rides'}) %>
+<%- include('../partials/_nav-bar.ejs') %>
+
+<main>
+  <h1> <%= user.username %> Edit this Ride</h1>
+  
+    <article>
+      <form action="/rides/<%= ride._id%>?_method=PUT" method="POST">
+        <label for="timeOfDay">Time of Day</label>
+        <select  name="timeOfDay" id="timeOfDay" required >
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+        </select>
+        
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" value="<%= ride.date %>" required>
+
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" value=" <%= ride.location %>" required>
+        
+        <label for="routeType">Route Type</label>
+        <select name="routeType" id="routeType">
+          <option value="Loop">Loop</option>
+          <option value="Out and Back">Out and Back</option>
+          <option value="Point to Point">Point to Point</option>
+        </select>
+
+        <label for="minutes">Minutes Biked </label>
+        <input type="number" min="0" name="minutes" id="minutes" value="<%=ride.minutes%>" >
+
+        <label for="miles">Miles Biked</label>
+        <input type="number" min="0" name="miles" id="miles" value="<%= ride.miles%>" >
+
+        <label for="completedFullTrail">Completed Full Trail</label>
+        <input type="checkbox" name="completedFullTrail" id="completedFullTrail" value=" <%= ride.completedFullTrail %>" >
+
+        <label for="notes">Notes for Trail Completion</label>
+        <textarea name="notes" id="notes" value="ride.notes" ></textarea>
+
+      <button type="submit">Finish Editing Ride</button>
+    </form>
+  </article>
+</main>
+</body>
+</html>
