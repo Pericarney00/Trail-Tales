@@ -9,7 +9,8 @@ const methodOverride = require("method-override");
 const morgan = require("morgan");
 const session = require("express-session");
 const authController = require("./controllers/auth.js");
-const ridesController = require("./controllers/rides")
+const ridesController = require("./controllers/rides.js")
+const usersController = require("./controllers/users.js")
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : "3000";
 const MongoStore = require("connect-mongo");
@@ -46,8 +47,8 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/auth", authController);
-app.use("/rides", ridesController)
-
+app.use("/rides", ridesController);
+app.use("/users", usersController);
 
 
 
