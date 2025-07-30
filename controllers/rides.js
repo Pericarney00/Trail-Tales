@@ -1,14 +1,18 @@
 const express = require("express");
 const router = express.Router();
 
+const User = require("../models/user")
 const Ride = require("../models/ride");
 
 router.get("/", async (req, res) => {
   try {
-    const populatedRides = await Ride.find({}).populate("owner")
-    
+    const currentUser = await User.findById(req.session.user._id)
+    const allOtherUsers = await User.find({username:{$ne:currentUser.username}})
+    const populatedRidesAll = await Ride.find().populate("owner")
+    const currentUserpopulatedRidesAll = await Ride.find({owner:req.session.user._id}).populate("owner");
+
     res.render("rides/index.ejs", {
-      rides: populatedRides
+      rides: currentUserpopulatedRidesAll
     })
   } catch (error) {
     console.log(error)

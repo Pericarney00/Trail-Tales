@@ -10,21 +10,35 @@
         <h4><%= ride.date.toDateString() %></h4> 
         <h5><%= ride.location %></h5> 
         <p>Route Type: <%= ride.routeType%> </p>
-        <p>Minutes rode: <%= ride.minutes %> Distance rode: <%= ride.mile %> (mi)</p>
+        <p>Minutes rode: <%= ride.minutes %> </p>
+        <p> Distance rode: <%= ride.miles %> mi</p>
         <p>Completed Full Trail: <%= ride.completedFullTrail %> </p>
         <p>Notes for ride: <%= ride.notes %></p>
+        <p> Owner: <%= ride.owner.username %></p>
       </article> 
     
+      <article>
+        <h4>Owner's Functions</h4>
+        <% if (ride.owner._id.equals(user._id)) { %>
+          <a role=button href="/rides/new">Add a New Ride</a>
+            
+          <a role=button href="/rides/<%= ride._id %>/edit">Edit This Ride</a>
+          
+          <form action="/rides/<%= ride._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE THIS RIDE</button>
+          </form>
+        <% } else { %>
+          <p>You don't own this, <%= ride.owner.username %> does!</p>
+        <% } %>
+      </article>
       <p>
-      <a role=button href="/rides/new">Add a New Ride</a>
+      
     </p>
     <p>
-      <a role=button href="/rides/<%= ride._id %>/edit">Edit This Ride</a>
+      
     </p>
 
-    <form action="/rides/<%= ride._id %>?_method=DELETE" method="POST">
-    <button type="submit">DELETE THIS RIDE</button>
-    </form>
+    
 
 
 </main>
