@@ -80,7 +80,17 @@ router.get("/:rideId", async (req, res) => {
   }
 })
 
-
+router.delete("/:rideId/favorited-by/:userId", async (req, res) => {
+  try {
+    await Ride.findByIdAndUpdate(req.params.rideId, {
+      $pull: { favoritedByUsers: req.params.userId },
+    });
+    res.redirect(`/rides/${req.params.rideId}`);
+  } catch (error) {
+    console.log(error)
+    res.redirect("/")
+  }
+});
 
 router.get("/:rideId/edit", async (req, res) => {
   try { 

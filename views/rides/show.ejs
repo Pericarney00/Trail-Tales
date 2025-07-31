@@ -22,13 +22,16 @@
         <p>Kudos from <%= ride.favoritedByUsers.length %> people. </p>
         <% if (userHasFavorited) { %>
           <p> You have given Kudos already!</p>
-        <% } else { %>
-        <p>You have not given Kudos.</p>
-
-        <form action="/rides/<%= ride._id %>/favorited-by/<%= user._id %>" method="POST">
-          <button type="submit">Kudos this Ride!</button>
-        </form>
-
+          <form action="/rides/<%= ride._id %>/favorited-by/<%= user._id %>?_method=DELETE" method="POST">
+              <button type="submit">Reverse Kudos. </button>
+          </form>
+          <% } else { %>
+            <p>You have not given Kudos.</p>
+            
+            <form action="/rides/<%= ride._id %>/favorited-by/<%= user._id %>" method="POST">
+              <button type="submit">Kudos this Ride!</button>
+            </form>
+            
         <% } %>
       </article>
 
