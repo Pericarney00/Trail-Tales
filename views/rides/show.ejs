@@ -18,6 +18,21 @@
       </article> 
     
       <article>
+        <h4>Kudos</h4>
+        <p>Kudos from <%= ride.favoritedByUsers.length %> people. </p>
+        <% if (userHasFavorited) { %>
+          <p> You have given Kudos already!</p>
+        <% } else { %>
+        <p>You have not given Kudos.</p>
+
+        <form action="/rides/<%= ride._id %>/favorited-by/<%= user._id %>" method="POST">
+          <button type="submit">Kudos this Ride!</button>
+        </form>
+
+        <% } %>
+      </article>
+
+      <article>
         <h4>Owner's Functions</h4>
         <% if (ride.owner._id.equals(user._id)) { %>
           <a role=button href="/rides/new">Add a New Ride</a>

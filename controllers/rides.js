@@ -48,13 +48,31 @@ router.post("/", async (req, res) => {
   }
 })
 
+router.post("/:rideId/favorited-by/:userId", async (req, res) => {
+  try {
+    await Ride.findByIdAndUpdate(req.params.rideId, {
+      $push: { favoritedByUsers: req.params.userId }
+    });
+    res.redirect(`/rides/${req.params.rideId}`);
+  } catch (error) {
+    console.log(error)
+    res.redirect("/")
+  }
+})
+
+
 
 router.get("/:rideId", async (req, res) => {
   try {
     const populatedRide = await Ride.findById(req.params.rideId).populate("owner");
-    console.log("Populated Ride is:", req.params.rideId);
+
+    const userHasFavorited = populatedRide.favoritedByUsers.some((user) => 
+      user.equals(req.session.user._id)
+    )
+
     res.render("rides/show.ejs", {
       ride: populatedRide,
+      userHasFavorited
     });
   } catch (error) {
     console.log("/")
