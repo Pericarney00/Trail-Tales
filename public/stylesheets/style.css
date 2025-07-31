@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+.fuzzy-bubbles-regular {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#logo {
+
+}

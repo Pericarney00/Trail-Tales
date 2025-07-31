@@ -7,6 +7,7 @@ const moment = require("moment")
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const path = require("path")
 const session = require("express-session");
 const authController = require("./controllers/auth.js");
 const ridesController = require("./controllers/rides.js")
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 // Morgan for logging HTTP requests
 app.use(morgan("dev"));
+app.use(express.static(path.join(__dirname,"public")))
 
 app.use(
   session({
