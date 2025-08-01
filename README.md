@@ -1,6 +1,8 @@
 # Trail-Tales
 ## **Screenshot/Logo**: A screenshot of your app or a logo.
-![Trail Tales Logo](Assets/trail-tales-logo.png)
+![Trail Tales Logo](public/images/trail-tales-logo.png)
+> **Logo:** Created by Peri Carney using AI-assisted design (OpenAI DALL·E).
+
 
 ## Trail Tales: Include a description of your app and what it does. Background info about the game and why you chose it is a nice touch.
 
@@ -13,9 +15,10 @@ I created Trail Tales because of my hobby of biking! I have been biking more and
 
 
 ## **Attributions**: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
-
+- Logo: Created by Peri Carney using AI-assisted design (OpenAI DALL·E).
 - [Moment](https://momentjs.com/)
 - [Pico](https://picocss.com/)
+-[Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
 ## **Technologies used**: List of the technologies used, for example: JavaScript, HTML, CSS, etc.
 
 Next Steps: Planned Future Enhancements (stretch goals).
@@ -25,6 +28,7 @@ Tech used includes:
 - JavaScript
 - CSS
 - [Pico](https://picocss.com/)
+-[Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
 
 Future Goals:
 - blogs: They will have a many to many relationship with the rides. This will also be used to grow the community aspect of the app. Eventually I want people to positively interact and engae with each other.

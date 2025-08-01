@@ -12,6 +12,22 @@
   font-style: normal;
 }
 
-#logo {
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family:"Fuzzy Bubbles", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Fuzzy Bubbles", sans-serif;
+}
+
+nav {
+  
+}
+
+#Logo {
+  border-radius: 8px;
 }

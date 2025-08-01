@@ -1,8 +1,8 @@
-<%- include('../partials/_html-head.ejs', {title: 'New Rides'}) %>
+<%- include('../partials/_html-head.ejs', {title: 'Edit Ride'}) %>
 <%- include('../partials/_nav-bar.ejs') %>
 
 <main>
-  <h1> <%= user.username %> Edit this Ride</h1>
+  <h1 class="h1"> <%= user.username %> Edit this Ride</h1>
   
     <article>
       <form action="/rides/<%= ride._id%>?_method=PUT" method="POST">

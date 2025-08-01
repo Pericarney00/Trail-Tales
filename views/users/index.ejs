@@ -2,13 +2,13 @@
 <%- include('../partials/_nav-bar.ejs') %>
 
 <main>
-<h1>Trail Tales Community!</h1>
+<h1 class="h1">Trail Tales Community!</h1>
 <p>View rides that have been logged by other users for inspiration for you next ride!</p>
 
-<h2>Community Rides:</h2>
+<h2 class="h2">Community Rides:</h2>
 <% rides.forEach(ride => { %>
       <article>
-        <h5> <%= ride.owner.username %>'s  Ride <%= ride.date.toDateString() %></h5> 
+        <h5 class="h5"> <%= ride.owner.username %>'s  Ride <%= ride.date.toDateString() %></h5> 
         <p><%= ride.location %></p> 
         <p><%= ride.notes %></p>
         <a href="/rides/<%= ride._id%>"> <p>View full ride details</p> </a>

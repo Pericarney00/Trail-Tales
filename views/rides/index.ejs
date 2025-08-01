@@ -1,8 +1,8 @@
-<%- include('../partials/_html-head.ejs', {title: 'All Rides'}) %>
+<%- include('../partials/_html-head.ejs', {title: 'View My Rides'}) %>
 <%- include('../partials/_nav-bar.ejs') %>
   
 <main>
-  <h1> <%= user.username %>'s Rides </h1>
+  <h1 class="h1"> <%= user.username %>'s Rides </h1>
   
     <% rides.forEach(ride => { %>
       <article>
