@@ -1,21 +1,28 @@
 <header>
   <nav>
-    <div >
+    
       <img id="Logo" src="/images/trail-tales-logo.png" alt="Trail Tales Logo">
-    </div>
-    <div id="themes">
-      <ul>
-        <li><a href="#" data-theme-switcher="auto">Auto</a></li>
-        <li><a href="#" data-theme-switcher="light">Light</a></li>
-        <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-      </ul>
+    
+    <div >
+      <ul >
+          <li >
+            <details role="list" class="dropdown" >
+              <summary aria-haspopup="listbox" role="link" class="contrast">Theme</summary>
+              <ul role="listbox">
+                <li ><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li ><a href="#" data-theme-switcher="light">Light</a></li>
+                <li ><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
     </div>
     
-      <li><a href="/">Home</a></li>
+      <li class="nav"><a href="/">Home</a></li>
       <% if (user) { %>
-      <li> <a href="/rides">View My Rides</a> </li>
-      <li> <a href="/users">Community Page</a> </li>
-      <li><a href="/auth/sign-out">Sign Out</a></li>
+      <li class="nav" > <a href="/rides">View My Rides</a> </li>
+      <li class="nav" > <a href="/users">Community Page</a> </li>
+      <li class="nav"><a href="/auth/sign-out">Sign Out</a></li>
       <% } else { %>
       <li><a href="/auth/sign-in">Sign In</a></li>
       <li><a href="/auth/sign-up">Sign Up</a></li>
