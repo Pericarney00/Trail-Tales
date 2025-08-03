@@ -9,9 +9,9 @@
             <details role="list" class="dropdown" >
               <summary aria-haspopup="listbox" role="link" class="contrast">Theme</summary>
               <ul role="listbox">
-                <li ><a href="#" data-theme-switcher="auto">Auto</a></li>
-                <li ><a href="#" data-theme-switcher="light">Light</a></li>
-                <li ><a href="#" data-theme-switcher="dark">Dark</a></li>
+                <li class="theme"><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li class="theme"><a href="#" data-theme-switcher="light">Light</a></li>
+                <li class="theme"><a href="#" data-theme-switcher="dark">Dark</a></li>
               </ul>
             </details>
           </li>
@@ -22,10 +22,10 @@
       <% if (user) { %>
       <li class="nav" > <a href="/rides">View My Rides</a> </li>
       <li class="nav" > <a href="/users">Community Page</a> </li>
-      <li class="nav"><a href="/auth/sign-out">Sign Out</a></li>
+      <li class="nav" > <a href="/auth/sign-out">Sign Out</a></li>
       <% } else { %>
-      <li><a href="/auth/sign-in">Sign In</a></li>
-      <li><a href="/auth/sign-up">Sign Up</a></li>
+      <li class="nav"><a href="/auth/sign-in">Sign In</a></li>
+      <li class="nav"><a href="/auth/sign-up">Sign Up</a></li>
       <% } %>
     </ul>
   </nav>
