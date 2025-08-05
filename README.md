@@ -32,6 +32,13 @@ Tech used includes:
 - [Moment](https://momentjs.com/)
 - [Pico](https://picocss.com/)
 -[Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
+- Express
+- MongoDB
+- Mongoose
+- Morgan
+- Method-override
+-
+
 
 Future Goals:
 - blogs: They will have a many to many relationship with the rides. This will also be used to grow the community aspect of the app. Eventually I want people to positively interact and engae with each other.
