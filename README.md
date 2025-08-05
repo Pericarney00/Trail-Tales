@@ -31,7 +31,7 @@ Tech used includes:
 - CSS
 - [Moment](https://momentjs.com/)
 - [Pico](https://picocss.com/)
--[Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
+- [Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
 - Express
 - MongoDB
 - Mongoose
