@@ -8,6 +8,8 @@
 
 I created Trail Tales because of my hobby of biking! I have been biking more and learning more about gear,common practices, trails, my community, and fitness goals. I wanted a way to document my bike rides by statistical information to track my progress and in a blog setting so I could utilize the pictures I took and share stories from my rides on the trails.
 
+When you go to the website you will be prompted to sign up or in. Once you are logged in you will see a welcoming message with information on how to navigate the site. You will be able to create and manage your Ride Logs. On the community page you will be able to see other user's rides and can give them Kudos!
+
 ## **Getting started**: Include a link to your deployed app and any instructions you deem important. This should also contain a link to your planning materials.
 
 - [Trello Planning Materials](https://trello.com/b/fVasRC3J/project-2-bike-tracking-app)
@@ -27,6 +29,7 @@ Tech used includes:
 - EJS
 - JavaScript
 - CSS
+- [Moment](https://momentjs.com/)
 - [Pico](https://picocss.com/)
 -[Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles)
 
