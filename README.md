@@ -24,7 +24,7 @@ I created Trail Tales because of my hobby of biking! I have been biking more and
 Next Steps: Planned Future Enhancements (stretch goals).
 
 Tech used includes:
-- HTML
+- EJS
 - JavaScript
 - CSS
 - [Pico](https://picocss.com/)

@@ -95,7 +95,6 @@ router.delete("/:rideId/favorited-by/:userId", async (req, res) => {
 router.get("/:rideId/edit", async (req, res) => {
   try { 
     const currentRide = await Ride.findById(req.params.rideId);
-    console.log(" THIS IS THE CONSOLE LOG", req.params.rideId)
     res.render("rides/edit.ejs", {
       ride: currentRide,
     });

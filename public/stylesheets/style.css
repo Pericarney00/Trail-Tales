@@ -471,64 +471,22 @@ progress,
 }
 
 
-/* ========================================Pico Colors Light Mode and Dark Mode====================================== */
+/* ========================================Stylesheet to override Pico====================================== */
 
 * {
   box-sizing: border-box;
 }
-/* @media (prefers-color-scheme: dark) {
-  body {
-    font-family:"Fuzzy Bubbles", sans-serif;
-    background-color:rgb(38,35,25) ;  Dark gray background for dark mode
-    color: rgb(242,234,221);  White text for dark mode 
-  }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family:"Fuzzy Bubbles", sans-serif;
-    color:rgb(242,234,221) 
-  }
 
-  p{
-    color:rgb(242,234,221) ;
-  }
-  nav{
-    color: rgb(242,234,221) ;
-  }
-  .nav a{ 
-    background-color: transparent  ;
-    color: rgb(242,234,221);
-  }
-
-  article{
-    background-color: rgb(82, 76, 55); 
-  }
-
-  a{
-    background-color: rgb(203,133,63)  ;
-    border: none ;
-    color: rgb(38,35,25) ;
-    padding: 0;
-  }
-
-  summary{
-    color: rgb(242,234,221) ;
-  }
-}  */
-/* =============LIGHT MODE */
 
 body {
   font-family:"Fuzzy Bubbles", sans-serif;
-  /* background-color:rgb(72, 159, 172) ;
-  color: rgb(38,35,25) !important */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family:"Fuzzy Bubbles", sans-serif;
-  /* color: rgb(38,35,25) !important */
 }
-p{
-  /* color: rgb(38,36,26) */
-}
+
 header {
   display:flex;
   height: 100px;
@@ -539,12 +497,9 @@ nav {
   display:flex;
   width: 100%;
   height: 100%;
-  /* color: rgb(38,35,25) !important */
+
 }
-.nav a{ 
-  /* background-color: transparent !important;
-  color: rgb(38,35,25) */
-}
+
 .dropdown ul{
   display: flex;
   flex-direction: column;
@@ -558,25 +513,5 @@ nav {
   height: 90px;
 }
 
-article{
-  /* background-color: rgb(242,234,221);  */
-}
 
-a{
-  /* background-color: rgb(203,133,63)  !important;
-  border: none !important;
-  color: rgb(38,35,25) !important;
-  padding: 0; */
-}
 
-.button, button{
-  /* background-color: rgb(203,133,63) !important;
-  border: none !important; */
-}
-
-ul{
-  /* background-color: transparent !important; */
-}
-summary{
-  /* color: rgb(38,35,25) !important */
-}
