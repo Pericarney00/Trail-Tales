@@ -13,7 +13,7 @@ When you go to the website you will be prompted to sign up or in. Once you are l
 ## **Getting started**: Include a link to your deployed app and any instructions you deem important. This should also contain a link to your planning materials.
 
 - [Trello Planning Materials](https://trello.com/b/fVasRC3J/project-2-bike-tracking-app)
-- [Trail Tales Deployed](https://trailtales-9edd5f26ccd2.herokuapp.com/)
+- [Trail Tales Deployed](https://trailtales-d8baefb71d22.herokuapp.com/)
 
 
 ## **Attributions**: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
